@@ -1,0 +1,465 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* *{
+    outline: 1px solid red;
+} */
+body {
+  background-color: #fafafa;
+}
+/* 產品列表排版 */
+.container {
+  width: 940px;
+  margin: 0 auto;
+  padding: 0 42px 0 42px;
+  background-color: #fff;
+  border: 1px solid #f2f2f2;
+  margin-top: 10px;
+}
+/* 頁面表頭 */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 940px;
+  height: 100px;
+}
+
+.logo {
+  height: 40px;
+  width: auto;
+}
+/* menu選單 */
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 319px;
+  font-size: 16px;
+  color: #3f5d45;
+  font-weight: bolder;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.shopping {
+  margin-left: 79px;
+  width: 24;
+  height: 24px;
+}
+/* Banner圖 */
+.banner {
+  width: 940px;
+  margin-bottom: 60px;
+}
+/* 側邊menu + 產品列表 */
+.content {
+  display: flex;
+  justify-content: space-between;
+}
+/* 側邊menu */
+.cake-list {
+  border: 1px solid #eaf0ed;
+}
+.cake-title,
+.cake-menu-1,
+.cake-menu {
+  width: 298px;
+  height: 65px;
+  font-style: 24px;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #3f5d45;
+  border-bottom: 1px solid #eaf0ed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+a:link {
+  text-decoration: none;
+}
+a:hover {
+  background-color: #eaf0ed;
+  display: block;
+}
+.cake-title {
+  color: #eaf0ed;
+  background-color: #3f5d45;
+}
+.cake-menu-1 {
+  background-color: #eaf0ed;
+}
+
+/* 產品列表 */
+.products {
+  width: 620px;
+}
+/* 橫列產品 */
+.cake-line {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+/* 產品&父層定位 */
+.cake {
+  position: relative;
+  z-index: 1;
+  width: 300px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+/* 產品flex */
+.cake-n-p {
+  display: flex;
+}
+/* 處理產品圖空隙 */
+img {
+  vertical-align: middle;
+}
+/* 產品樣式 */
+.left-name,
+.right-price {
+  font-size: 20px;
+  text-align: center;
+  letter-spacing: 0px;
+  color: #3f5d45;
+  border: 1px solid #eaf0ed;
+  padding: 14px 0 14px 0;
+}
+/* 產品名稱&價格 */
+.left-name {
+  width: 173px;
+}
+.right-price {
+  width: 127px;
+}
+/* 加入購物車 */
+.add-shopping {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  color: #3f5d45;
+  padding: 15px 0 15px 0;
+  background-color: #eaf0ed;
+}
+/* 本日精選位置 */
+.sale {
+  position: absolute;
+  z-index: 2;
+  left: 20px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* 本日精選樣式 */
+.sale-center {
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  width: 30px;
+  height: 90px;
+  line-height: 20px;
+  font-size: 16px;
+  background-color: #3f5d45;
+  padding: 5px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+/* 加入最愛位置 */
+.favorite {
+  position: absolute;
+  z-index: 3;
+  right: 15px;
+  top: 15px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* 產品頁數(前-下一頁) */
+.p-page {
+  display: flex;
+  justify-content: end;
+  margin-bottom: 60px;
+}
+.p-cake-page {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: auto;
+  font-size: 20px;
+  color: #3f5d45;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.cake-page-pre,
+.cake-page-1,
+.cake-page,
+.cake-page-next {
+  margin: 0;
+  border: 1px solid #eaf0ed;
+  width: 58px;
+  height: 58px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #3f5d45;
+}
+.cake-page-1 {
+  background-color: #3f5d45;
+  color: #eaf0ed;
+}
+.arrow-pre,
+.arrow-next {
+  width: 24px;
+  height: 24px;
+}
+/* 頁底footer */
+.footer {
+  width: 1024px;
+  margin: 0 auto;
+}
+/* 頁底訂閱 */
+.email {
+  padding: 0 122px 0 122px;
+  height: 116px;
+  background-color: #3f5d45;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.email-left {
+  display: flex;
+  align-items: center;
+}
+.email-logo {
+  width: 40px;
+  height: 40px;
+  margin-right: 20px;
+  display: flex;
+}
+.email-text {
+  font-size: 26px;
+  color: #eaf0ed;
+  font-family: Helvetica Neue, Regular;
+  align-self: center;
+}
+.email-right {
+  width: 380px;
+  height: 56px;
+  background-color: #eaf0ed;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.email-icon {
+  width: 24px;
+  height: 24px;
+  margin: 16px 0 16px 20px;
+}
+.email-submit {
+  width: 64px;
+  height: 100%;
+  background-color: #ffe180;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* 頁底資訊 */
+.bottom-info {
+  background-color: #eaf0ed;
+  padding: 38px 122px 38px 122px;
+  /* height: auto; */
+  margin-bottom: 60px;
+}
+/* 今天是個吃甜點的好日子 */
+.info {
+  display: flex;
+  justify-content: space-between;
+}
+.info-logo {
+  width: 171px;
+}
+.info-contact {
+  margin-top: 115px;
+}
+.contact {
+  font-size: 16px;
+  color: #3f5d45;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 24px;
+}
+/* 垂直文字後跟隨垂直線 */
+.info-right {
+  writing-mode: vertical-rl;
+  font-size: 24px;
+  font-weight: bold;
+  color: #3f5d45;
+  letter-spacing: 5px;
+  font-family: "Times New Roman", Times, serif;
+  width: 60px;
+}
+.add-line {
+  display: flex;
+  align-items: center;
+}
+.add-line::after {
+  content: "";
+  display: block;
+  width: 1px;
+  height: 40px;
+  background-color: #3f5d45;
+  margin-left: 6px;
+}
+.good-day {
+  margin-right: 12px;
+  text-indent: 12px;
+}
+
+/* 社群+版權  */
+.social-media {
+  color: #3f5d45;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.email-at {
+  width: 32px;
+  height: 32px;
+  margin-right: 8px;
+}
+.fb {
+  width: 32px;
+  height: 32px;
+}
+.copyright {
+  font-size: 16px;
+  color: #3f5d45;
+  font-weight: bold;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
